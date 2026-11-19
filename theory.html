@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Theory &amp; Expectations · Recasting a Brake Rotor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Sections">
+    <a class="back" href="project.html">← All sections</a>
+    <a class="tab" href="theory.html" aria-current="page">Theory &amp; Expectations</a>
+    <a class="tab" href="lab.html">Casting in the Lab</a>
+    <a class="tab" href="impact.html">Environmental Impact</a>
+  </nav>
+
+  <main>
+    <section id="expectations">
+      <p class="kicker">01 · Theory &amp; expectations</p>
+      <h2>Material Analysis: Expectations</h2>
+      <p>The iron-carbon phase diagram is shown in Figure 1.</p>
+      <figure class="framed narrow">
+        <img src="Pictures/theory/fe-c-phase-diagram.png" alt="Iron-carbon phase diagram from 0 to 6.7 wt% carbon, labelling the liquid, delta-ferrite, austenite, alpha-ferrite and cementite fields and the eutectic and eutectoid points" loading="lazy">
+        <figcaption><b>Figure 1.</b> Phase diagram of iron-carbon, including labels [<a href="#source-2">2</a>].</figcaption>
+      </figure>
+      <p>The solubility limit of the α-ferrite is not noted on the phase diagram, but it appears to be very low, to the degree of 10<sup>−2</sup> wt%. This solubility limit occurs at 727 °C. The solubility limit of the γ-austenite occurs at 2.11% carbon at 1148 °C. Finally, the solubility limit of the δ-ferrite is also not noted on the phase diagram. It occurs at 1495 °C and appears to be close to 0.1% carbon.</p>
+      <figure class="framed">
+        <img src="Pictures/theory/graphite-vs-cementite.jpg" alt="Two iron-carbon phase diagrams side by side, one for the iron-graphite system and one for the iron-cementite system" loading="lazy">
+        <figcaption><b>Figure 2.</b> Phase diagrams of iron and carbon, comparing the two potential materials that may form at each phase [<a href="#source-2">2</a>].</figcaption>
+      </figure>
+      <p>For cast iron, we will be looking at between 2–4% carbon [<a href="#source-2">2</a>]. There is the potential for two different outcomes in the phase changes of iron-carbon. In one case, the carbon separates from the iron due to the solubility limit and forms graphite. In the other case, the carbon stays bonded with iron and forms cementite. Our starting temperature where the alloy is entirely liquid is about 1600 °C. At 1200 °C, we are in a mixed phase of austenite and liquid. At 1100 °C, we can expect to see austenite + cementite or austenite + graphite. At 600 °C and below, we expect to see ferrite + cementite or ferrite + graphite.</p>
+
+      <h3>Phase compositions</h3>
+      <p>Assuming we have 3 wt% carbon cast iron we can expect to see the following chemical compositions:</p>
+      <ul class="ladder">
+        <li><span class="t">1600 °C</span><span>Liquid that is 3 wt% Carbon and 97 wt% Iron.</span></li>
+        <li><span class="t">1200 °C</span><span>The Austenite has 2 wt% Carbon and the liquid has 3.9 wt% in this phase.</span></li>
+        <li><span class="t">1100 °C</span><span>The Austenite has 2.1 wt% Carbon and the Cementite has 6.7 wt% Carbon at all times.</span></li>
+        <li><span class="t">600 °C</span><span>The Ferrite has .1 wt% Carbon and the Cementite has 6.7 wt% Carbon at all times.</span></li>
+      </ul>
+
+      <h3>Relative amounts of each phase</h3>
+      <p>Assuming we have 3 wt% carbon cast iron we can expect to see the following relative amounts of each phase:</p>
+      <ul class="ladder">
+        <li><span class="t">1600 °C</span><span>100% liquid.
+          <span class="bar" aria-hidden="true"><span class="liq" style="width:100%">Liquid 100%</span></span></span></li>
+        <li><span class="t">1200 °C</span><span>47.3% Austenite and 52.6% Liquid.
+          <span class="bar" aria-hidden="true"><span class="aus" style="width:47.3%">γ 47.3%</span><span class="liq" style="width:52.7%">L 52.6%</span></span></span></li>
+        <li><span class="t">1100 °C</span><span>80.4% Austenite and 19.6% Cementite.
+          <span class="bar" aria-hidden="true"><span class="aus" style="width:80.4%">γ 80.4%</span><span class="cem" style="width:19.6%">Fe₃C 19.6%</span></span></span></li>
+        <li><span class="t">600 °C</span><span>56.1% Ferrite and 43.9% Cementite.
+          <span class="bar" aria-hidden="true"><span class="fer" style="width:56.1%">α 56.1%</span><span class="cem" style="width:43.9%">Fe₃C 43.9%</span></span></span></li>
+        <li><span class="t">400 °C</span><span>55.6% Ferrite and 44.4% Cementite.
+          <span class="bar" aria-hidden="true"><span class="fer" style="width:55.6%">α 55.6%</span><span class="cem" style="width:44.4%">Fe₃C 44.4%</span></span></span></li>
+      </ul>
+      <p class="legend"><span><i style="background:var(--heat)"></i>Liquid (L)</span><span><i style="background:#d9b38c"></i>Austenite (γ)</span><span><i style="background:var(--tint)"></i>Ferrite (α)</span><span><i style="background:#8d8a84"></i>Cementite (Fe₃C)</span></p>
+    </section>
+
+    <section id="sources">
+      <h3>Sources</h3>
+      <ol class="sources">
+        <li id="source-2" value="2">ASM International. <i>ASM Handbook</i>, Chapter 24: Cast Irons.</li>
+      </ol>
+    </section>
+    <nav class="page-end" aria-label="More sections">
+      <a class="next" href="lab.html"><small>Next</small>Casting in the Lab →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <p>Team member names go here<br>Metals, Mining &amp; the Environment · Olin College · Fall 2026</p>
+    <p><a href="index.html">← Back to the start</a></p>
+  </footer>
+</body>
+</html>

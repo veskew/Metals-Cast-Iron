@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MM&amp;E Cast Iron Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; height: 100%; }
+    body {
+      display: flex; flex-direction: column; color: #e4e2dd;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      /* Faint concentric turning marks, like the machined friction face of a rotor. */
+      background:
+        radial-gradient(circle at 50% 55%, rgba(255, 122, 46, 0.07), transparent 55%),
+        repeating-radial-gradient(circle at 50% 55%, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 7px),
+        #17181a;
+    }
+    header { text-align: center; padding: 40px 16px 0; }
+    header h1 {
+      margin: 0; font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+      font-size: clamp(44px, 8vw, 92px); font-weight: 700; line-height: 0.95;
+      text-transform: uppercase; letter-spacing: 0.02em;
+    }
+    header p { margin: 14px 0 0; font-size: clamp(12px, 1.6vw, 15px); letter-spacing: 0.12em; text-transform: uppercase; color: #a19f99; }
+
+    /* Landing image goes here. Swap the placeholder for an <img> or <model-viewer> when it's ready. */
+    .hero { flex: 1; min-height: 0; display: grid; place-items: center; padding: 24px 16px; }
+    .hero-slot {
+      width: min(560px, 70vh, 100%); aspect-ratio: 1; border-radius: 50%;
+      border: 2px dashed #36383d; display: grid; place-items: center;
+      color: #5c5e63; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;
+    }
+
+    .actions { display: flex; justify-content: center; padding: 8px 16px 48px; }
+
+    /* The button is a brake pad: dark at rest, glowing red-hot when you press into it. */
+    .pad {
+      position: relative; display: grid; place-items: center;
+      width: 240px; height: 64px; border-radius: 6px 6px 22px 22px;
+      font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-size: 24px; font-weight: 700;
+      letter-spacing: 0.24em; text-transform: uppercase; text-decoration: none;
+      color: #e4e2dd; background: linear-gradient(#3a3c41, #26282c);
+      border: 1px solid #4a4c52; outline: none;
+      transition: color 300ms ease, background 400ms ease, box-shadow 400ms ease, transform 150ms ease;
+    }
+    .pad:hover, .pad:focus-visible {
+      color: #1a0d06;
+      background: linear-gradient(#ffb15e, #ff6a1f 55%, #c8371a);
+      box-shadow: 0 0 24px rgba(255, 106, 31, 0.55), 0 0 64px rgba(255, 70, 20, 0.3);
+    }
+    .pad:focus-visible { box-shadow: 0 0 0 3px #17181a, 0 0 0 5px #ff7a2e, 0 0 40px rgba(255, 106, 31, 0.5); }
+    .pad:active { transform: scale(0.97); }
+    @media (prefers-reduced-motion: reduce) { .pad { transition: none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MM&amp;E Cast Iron Project</h1>
+    <p>Team member names go here</p>
+  </header>
+
+  <div class="hero">
+    <div class="hero-slot" role="img" aria-label="Landing image placeholder">Image coming soon</div>
+  </div>
+
+  <div class="actions">
+    <a class="pad" href="project.html">Recast</a>
+  </div>
+</body>
+</html>
