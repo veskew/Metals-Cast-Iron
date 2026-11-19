@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
     html, body { margin: 0; height: 100%; }
     body {
@@ -26,9 +27,9 @@
     }
     header p { margin: 14px 0 0; font-size: clamp(12px, 1.6vw, 15px); letter-spacing: 0.12em; text-transform: uppercase; color: #a19f99; }
 
-    /* Interactive 3D brake assembly from Sketchfab, with the required credit line under it. */
+    /* Interactive 3D rotor (CC BY model, credited under it). */
     .hero { flex: 1; min-height: 320px; display: flex; flex-direction: column; padding: 16px 16px 0; }
-    .hero iframe { flex: 1; width: 100%; min-height: 0; border: 0; display: block; }
+    model-viewer { flex: 1; width: 100%; min-height: 0; --poster-color: transparent; }
     .credit { margin: 8px 0 0; text-align: center; font-size: 12px; letter-spacing: 0.04em; color: #6f7176; }
     .credit a { color: #a19f99; }
     .credit a:hover, .credit a:focus-visible { color: #ff7a2e; }
@@ -62,12 +63,17 @@
   </header>
 
   <div class="hero">
-    <iframe
-      title="Interactive 3D model of a brake assembly"
-      src="https://sketchfab.com/models/a763a31094854e489c5e7f82e107a7d8/embed?autostart=1&amp;autospin=0.3&amp;transparent=1&amp;ui_theme=dark&amp;ui_hint=0&amp;dnt=1"
-      allow="autoplay; fullscreen; xr-spatial-tracking"
-      allowfullscreen></iframe>
-    <p class="credit"><a href="https://sketchfab.com/3d-models/brake-assembly-update-a763a31094854e489c5e7f82e107a7d8" target="_blank" rel="nofollow noopener">Brake Assembly update</a> by <a href="https://sketchfab.com/bmcaff" target="_blank" rel="nofollow noopener">bmcaff</a> on <a href="https://sketchfab.com" target="_blank" rel="nofollow noopener">Sketchfab</a></p>
+    <model-viewer
+      src="3dModels/vented-brake-rotor.glb"
+      alt="3D model of a vented brake rotor"
+      camera-controls
+      auto-rotate
+      rotation-per-second="20deg"
+      camera-orbit="30deg 70deg auto"
+      exposure="0.9"
+      shadow-intensity="1">
+    </model-viewer>
+    <p class="credit"><a href="https://sketchfab.com/3d-models/b4393b994037442db7da86a4fba8fb85" target="_blank" rel="noopener">Vented Disk Brake Rotor</a> by <a href="https://sketchfab.com/pao1011" target="_blank" rel="noopener">pao1011</a>, licensed <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
   </div>
 
   <div class="actions">
